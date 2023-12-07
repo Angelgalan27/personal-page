@@ -1,0 +1,9 @@
+  <div class=" mb-4 mt-4 ml-8 fadein animation-duration-2000">
+    <div class="flex align-items-center">
+      <i [class]="'icon-experiencia icon-32 m-2 ' + skill.icon"></i>
+      <h3>{{skill.name}}</h3>
+    </div>
+    <p-progressBar [value]="skill.level" unit="" [color]="getColor()"></p-progressBar>
+</div>
+
+

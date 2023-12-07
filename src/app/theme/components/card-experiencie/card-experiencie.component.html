@@ -1,0 +1,15 @@
+<div class="m-6 border-bottom-1 border-300 fadein animation-duration-2000 p-3">
+  <div class="flex flex-column">
+    <img *ngIf="experience.logo" [src]="photo" alt="" class="logo-empresa m-auto">
+    <p class="mb-1">{{'experience.company'|translate}} : {{experience.company}}</p>
+    <p class="mb-1 mt-1">{{'experience.date'|translate}} : {{experience.startDate |date : 'dd/MM/yyyy'}} - {{experience.endDate ? (experience.endDate |date : 'dd/MM/yyyy') : 'global.present'|translate}}</p>
+    <p class="mb-1">{{'experience.position'|translate}} : {{experience.position}}</p>
+    <p class="mb-1">{{'experience.responsibilities'|translate}} : {{experience.responsibilities}}</p>
+    <div class="mb-1 pb-3" *ngIf="experience.technologiesUsed && experience.technologiesUsed.length > 0">
+      {{'experience.technologiesUsed'|translate}}:
+      <div  class="flex flex-wrap">
+        <p-chip [label]="tec.technology" *ngFor="let tec of experience.technologiesUsed" styleClass="mr-3 mb-2 mt-2" [icon]="'icon-experiencia icon-24 ' + tec.icon"></p-chip>
+      </div>
+    </div>
+  </div>
+</div>

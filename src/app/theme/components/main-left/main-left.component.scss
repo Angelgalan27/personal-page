@@ -1,0 +1,29 @@
+i {
+  cursor: pointer;
+  opacity: 0.7;
+}
+i:hover {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+.links a:visited{
+  color: #3B82F6;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  display: block;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
+
+}
+
+
+.links a {
+  color: #3B82F6;
+}
+
+.main-left{
+  z-index: 100;
+  position: relative;
+}

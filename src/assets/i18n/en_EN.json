@@ -1,0 +1,24 @@
+{
+  "global": {
+    "profesionalExperience": "Profesional experience",
+    "trainingEducation": "Education and training",
+    "skills": "Hard Skills",
+    "project": "Some jobs",
+    "spain": "Spain",
+    "english": "English",
+    "present": "Present"
+  },
+  "experience": {
+    "date": "Date",
+    "position": "Position",
+    "responsibilities": "Responsibilities",
+    "technologiesUsed": "Technologies used",
+    "company": "Company"
+  },
+  "educaeducationcion": {
+    "date": "Date",
+    "qualification": "Qualification",
+    "institution": "Institution",
+    "description": "Description"
+  }
+}

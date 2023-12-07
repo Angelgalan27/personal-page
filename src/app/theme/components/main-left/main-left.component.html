@@ -1,0 +1,22 @@
+<div class="xl:shadow-8 h-full pt-4 main-left" *ngIf="personalData">
+ <div class="flex flex-column justify-content-center align-items-center  pb-4">
+  <img class="m-auto" [src]="photo" alt="">
+ </div>
+ <div class="p-4 flex justify-content-center links border-bottom-1 border-black-50">
+  <a [href]="personalData.linkedin" target="_blank">
+    <i class="fa-brands fa-linkedin text-6xl mr-3">
+    </i>
+  </a>
+  <a [href]="personalData.github" target="_blank">
+    <i class="fa-brands fa-github text-6xl mr-3"></i>
+  </a>
+  <a [href]="'https://wa.me/' + personalData.phone" target="_blank">
+    <i class="fa-brands fa-whatsapp text-6xl mr-3"></i>
+  </a>
+  <a [href]="'mailto:' + personalData.email" >
+    <i class="fa-solid fa-envelope text-6xl mr-3"></i>
+  </a>
+ </div>
+ <div class="text-justify p-4" [innerHTML]="personalData.presentationText">
+ </div>
+</div>

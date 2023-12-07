@@ -1,0 +1,29 @@
+<div class="p-4 flex justify-content-around shadow-6">
+  <div>
+    <h1 *ngIf="personalData" class="mt-2">{{personalData.name}}</h1>
+  </div>
+  <div class="flex">
+    <i class="icon-experiencia icon-32 icon-espana mr-4 cursor-pointer" [pTooltip]="'global.spain'|translate" tooltipPosition="bottom" (click)="setLanguge('es_ES')"></i>
+    <i class="icon-experiencia icon-32 icon-reino-unido cursor-pointer" [pTooltip]="'global.english'|translate" tooltipPosition="bottom"(click)="setLanguge('en_EN')"></i>
+  </div>
+</div>
+<div >
+  <p-tabView>
+    <p-tabPanel [header]="'global.profesionalExperience'|translate">
+      <app-card-experiencie *ngFor="let exp of experiencies" [experience]="exp"></app-card-experiencie>
+    </p-tabPanel>
+    <p-tabPanel [header]="'global.trainingEducation'|translate">
+      <app-card-education *ngFor="let edu of educations" [education]="edu"> </app-card-education>
+    </p-tabPanel>
+    <p-tabPanel [header]="'global.skills'|translate">
+      <div class="flex flex-wrap justify-content-between">
+        <app-card-skill *ngFor="let skill of skills" [skill]="skill" class="w-full lg:w-5"></app-card-skill>
+      </div>
+
+    </p-tabPanel>
+    <!--p-tabPanel [header]="'global.project'|translate">
+      Algunos trabajos
+    </p-tabPanel-->
+  </p-tabView>
+
+</div>

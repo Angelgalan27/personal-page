@@ -1,0 +1,9 @@
+<div  class="m-6 border-bottom-1 border-300 fadein animation-duration-2000 p-3">
+  <div class="flex flex-column">
+  <img *ngIf="education.logo" [src]="photo" alt="" class="logo-educacion m-auto">
+  <h2>{{education.qualification}}</h2>
+  <p class="mb-1 mt-1">{{'education.date'|translate}} : {{education.startDate |date : 'dd/MM/yyyy'}} - {{education.endDate ? (education.endDate |date : 'dd/MM/yyyy') : 'global.present'|translate}}</p>
+  <p class="mb-1">{{'education.institution'|translate}} : {{education.institution}}</p>
+  <p class="mb-1">{{'education.description'|translate}} : {{education.description}}</p>
+  </div>
+</div>
